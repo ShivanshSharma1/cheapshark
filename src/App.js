@@ -47,14 +47,11 @@ const AllGames = ({ games }) => {
 
 const App = () => {
   let [games, setGames] = useState();
-  const fetchData = async () => {
+  useEffect(async () => {
     const response = await fetch('https://www.cheapshark.com/api/1.0/deals?');
     const data = await response.json();
     await setGames(data)
-    await console.log(data)
-    // console.log(games)
-  }
-  useEffect(fetchData, [])
+    await console.log(data)}, [])
   const Background = 'https://i.pinimg.com/originals/f5/67/99/f56799d20e790b1df5bbef8f537579e5.jpg'
   return (
     <div style={{
