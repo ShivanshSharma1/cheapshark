@@ -34,8 +34,8 @@ const Game = ({ game }) => {
           </a>
         </div>
       </td>
-      <td style={{ padding: '10px 0px 0px 0px', color: 'white' }}>Normal Price -{game.normalPrice}</td>
-      <td style={{ padding: '10px 0px 0px 0px', color: 'white' }}>Sale Price-{game.salePrice}</td>
+      <td style={{ padding: '10px 0px 0px 0px', color: 'white', paddingLeft:'50px'}}>${game.normalPrice}</td>
+      <td style={{ padding: '10px 0px 0px 0px', color: 'white', paddingLeft:'45px' }}>${game.salePrice}</td>
     </tr>
   )
 }
